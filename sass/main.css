@@ -45,6 +45,8 @@ body {
   border-radius: 25px;
   background-color: #0063dd;
   width: 165px;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
   color: #ffffff;
   font-weight: bold;
   line-height: 27px;
@@ -115,6 +117,10 @@ footer ul, li {
   text-decoration: none;
   list-style: none;
   padding: 3% 0;
+}
+
+a {
+  color: #0f7bff;
 }
 
 a:hover {
@@ -341,5 +347,12 @@ hr {
   .to-top {
     left: 94%;
   }
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  height: 60px;
 }
 /*# sourceMappingURL=main.css.map */
