@@ -119,14 +119,11 @@ footer ul, li {
 
 a:hover {
   text-decoration: none;
+  color: #0f7bff;
 }
 
 footer a {
   color: #929292;
-}
-
-footer a:hover {
-  color: #0f7bff;
 }
 
 .footer {
@@ -254,6 +251,26 @@ hr {
   font-size: 18px;
   color: #333333;
   font-weight: 500;
+}
+
+.blog-h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.blog-h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #333333;
+}
+
+.blog-h4 a {
+  color: #333333;
+}
+
+.blog-h4 a:hover {
+  color: #0f7bff;
 }
 
 @media (max-width: 769px) {
