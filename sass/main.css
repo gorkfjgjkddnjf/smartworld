@@ -279,6 +279,16 @@ hr {
   color: #0f7bff;
 }
 
+.continue {
+  color: #333333;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.continue:hover {
+  color: #0f7bff;
+}
+
 @media (max-width: 769px) {
   .other {
     text-align: center;
@@ -349,10 +359,15 @@ hr {
   }
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="search"] {
   font-size: 16px;
   line-height: 27px;
   font-weight: 400;
   height: 60px;
+  color: #929292;
+}
+
+input[type="search"] {
+  padding-left: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
