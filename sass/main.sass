@@ -251,8 +251,19 @@ hr
         border-color: #0f7bff
     &:focus
         border-color: #0f7bff   
-        background-color: #0f7bff 
-    
+        background-color: #0f7bff
+        box-shadow: none !important   
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle
+    border-color: #0f7bff   
+    background-color: #0f7bff
+        
+.page-link
+    color: #ffffff
+    background-color: #0f7bff
+    border: none
+    &:hover
+        background-color: #ffffff
 
 @media ( max-width: 769px )
     .other

@@ -317,6 +317,23 @@ hr {
 .btn-tags:focus {
   border-color: #0f7bff;
   background-color: #0f7bff;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  border-color: #0f7bff;
+  background-color: #0f7bff;
+}
+
+.page-link {
+  color: #ffffff;
+  background-color: #0f7bff;
+  border: none;
+}
+
+.page-link:hover {
+  background-color: #ffffff;
 }
 
 @media (max-width: 769px) {
