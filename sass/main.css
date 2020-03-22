@@ -383,6 +383,10 @@ hr {
   background-color: #ffffff;
 }
 
+.blockquote {
+  color: #333333;
+}
+
 @media (max-width: 769px) {
   .other {
     text-align: center;
