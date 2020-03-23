@@ -42,7 +42,7 @@
 body
     font-family: Quicksand, sans-serif  
 
-.btn-sign-in, .btn-sign-up
+.btn-sign-in, .btn-sign-up, .btn-sign-up-home
     border-radius: 25px
     background-color: #007bff
     width: 165px
@@ -57,6 +57,10 @@ body
        color: #ffffff
        background-color: #2274ee
        border-color: #2274ee
+
+.btn-sign-up-home
+    background-color: #0063dd
+    margin-left: 1.5rem
 
 .btn-post
     border-radius: 25px
@@ -130,7 +134,8 @@ footer a
     color: #929292
 
 .footer
-    height: 100px
+    padding-top: 2.3rem
+    padding-bottom: 2.3rem
 
 .footer-a
     margin: 2rem
@@ -329,15 +334,18 @@ hr
         text-align: center
     .other-1
         text-align: center
+    #hr-home
+        width: 30rem
 
-@media ( max-width: 992px )
-    .other
-        text-align: center
-    .other-1
-        text-align: center
-    .to-top
-        bottom: 4%
-        left: 85%
+@media ( max-width: 1590px )
+    .bg-1
+        left: 0
+    .text-bg-1
+        left: 0
+    .bg-2
+        left: 0
+    .text-bg-2
+        left: 0
 
 @media ( min-width: 2000px )
     .brand
@@ -348,17 +356,27 @@ hr
         left: 80%
 
 @media ( max-width: 992px )
+    .other
+        text-align: center
+    .other-1
+        text-align: center
+    .to-top
+        bottom: 4%
+        left: 85%
     .brand
         margin-left: 0
     #navbarSupportedContent
         margin-right: 0
     .header
-        text-align: center 
+        text-align: center  
+    .btn-sign-up-home
+        margin-left: 0
+
 
 @media ( max-width: 576px )
     .btn-log-socety
         padding: 1rem
-    .btn-sign-up
+    .btn-sign-up, .btn-sign-up-home
         margin: 0 auto
     .brand
         padding-left: 0
@@ -366,6 +384,16 @@ hr
         display: none
     .footer-a
         margin: 0.5rem
+    .to-down
+        text-align: center
+    .bg-1
+        left: 0
+    .text-bg-1
+        left: 0
+    .bg-2
+        left: 0
+    .text-bg-2
+        left: 0
 
 @media ( min-width: 992px) and (max-width: 1313px )
     .to-top
@@ -426,6 +454,12 @@ input
         color: #ffffff
         background-color: #0f7bff 
         border: 2px solid #ffffff
+    &::-webkit-input-placeholder
+        color: #ffffff
+    &::-moz-placeholder
+        color: #ffffff
+    &:-ms-input-placeholder
+        color: #ffffff
 
 .logo-text
     color: #ffffff
@@ -496,12 +530,17 @@ input
     padding-top: 7rem
     padding-bottom: 7rem
 
+.hdiw
+    background-color: #f5fcfd
+    padding-top: 6rem
+    padding-bottom: 7rem
+
+.backround-1
+    background-color: #f5fcfd
 
 #hr-home
 	background-color: #0f7bff
-	left: 8rem
 	top: 4.7rem
-	width: 50rem
 
 #h1
     color: #333333
@@ -520,4 +559,39 @@ header
     cursor: pointer
 
 .home-device
-    margin-top: 17rem
+    margin-top: 6rem
+
+.block-2-2
+    top: 3rem
+
+.block-home
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+
+.logo-home
+    background-color: #0f7bff
+    color: #ffffff
+    font-size: 36px
+    padding-bottom: 1.7rem
+    font-weight: 700
+    border-radius: 0px 0px 20px 20px
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+    padding-top: 1rem
+    &:hover
+        color: #ffffff
+
+.bg-1
+    right: 8rem
+
+.text-bg-1
+    right: 6rem
+
+.bg-2
+    right: -8rem
+
+.text-bg-2
+    right: -6rem
+
+#foot-hr
+    background-color: #ffffff
