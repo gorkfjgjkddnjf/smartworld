@@ -21,6 +21,18 @@
   background-color: #f5fcfd;
 }
 
+.bg-home .navbar-nav .nav-link {
+  font-size: 16px;
+  color: #929292;
+  font-weight: bold;
+  line-height: 27px;
+  margin-right: 25px;
+}
+
+.bg-home .navbar-nav .nav-link:hover {
+  color: #0f7bff;
+}
+
 .bg-costum .navbar-nav .nav-link {
   font-size: 16px;
   color: #929292;
@@ -93,6 +105,7 @@ body {
 .main-text {
   color: #929292;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .facebook-btn, .twitter-btn {
@@ -169,7 +182,7 @@ footer a {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-  color: #929292;
+  color: #333333;
 }
 
 .backround {
@@ -388,6 +401,11 @@ hr {
   font-size: 16px;
 }
 
+.search {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 @media (max-width: 769px) {
   .other {
     text-align: center;
@@ -474,5 +492,171 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
   height: 60px;
   color: #929292;
   padding-left: 1.5rem;
+}
+
+.footer-home {
+  margin: 1rem;
+  color: #d8d8d8;
+}
+
+.footer-home:hover {
+  color: #ffffff;
+}
+
+.backround-home {
+  background-color: #0f7bff;
+  padding-top: 7rem;
+}
+
+.form-footer {
+  padding-bottom: 7rem;
+}
+
+.footer-text {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.foot-ico .fab {
+  color: #d8d8d8;
+}
+
+.foot-ico .fab:hover {
+  color: #ffffff;
+}
+
+.btn-subscribe {
+  background-color: #ffffff;
+  color: #0f7bff;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.btn-subscribe:hover {
+  color: #0f7bff;
+}
+
+.backround-home input[type="email"] {
+  color: #ffffff;
+  background-color: #0f7bff;
+  border: 2px solid #ffffff;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.free-trial {
+  background-color: #f5fcfd;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.free-trial h3 {
+  font-size: 32px;
+  color: #333333;
+  font-weight: 500;
+}
+
+.btn-trial {
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.title-h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.title-backround {
+  background-position: center;
+  background-image: url(../img/title-h3.png);
+  background-repeat: no-repeat;
+}
+
+.news-h3 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #0f7bff;
+}
+
+.continue-home {
+  color: #0f7bff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.latest-news {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 500;
+  color: #0f7bff;
+}
+
+.dol {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-prcing-plan {
+  font-size: 16px;
+  color: #0f7bff;
+  font-weight: 700;
+  border: 2px solid #0f7bff;
+}
+
+.btn-prcing-plan:hover {
+  background-color: #0f7bff;
+  border-color: #0f7bff;
+}
+
+.price-ul li {
+  padding-bottom: 0;
+}
+
+.backround-2 {
+  background-color: #f5fcfd;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+#hr-home {
+  background-color: #0f7bff;
+  left: 8rem;
+  top: 4.7rem;
+  width: 50rem;
+}
+
+#h1 {
+  color: #333333;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+header {
+  background-color: #f5fcfd;
+  background-image: url(../img/Shape_1.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.to-down {
+  bottom: 2rem;
+  cursor: pointer;
+}
+
+.home-device {
+  margin-top: 17rem;
 }
 /*# sourceMappingURL=main.css.map */

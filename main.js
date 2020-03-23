@@ -10,3 +10,19 @@
 
     btnToTop.addEventListener('click', backToTop);
 })();
+
+(function(){
+
+    function backToDown(){
+        let match = Math.ceil(window.pageYOffset + document.documentElement.clientHeight);
+  
+        if (match != document.documentElement.scrollHeight) {
+          window.scrollBy(0, 15);
+          setTimeout(backToDown, 0);
+        } 
+    }
+    let btnToDown = document.querySelector('.to-down');
+
+    btnToDown.addEventListener('click', backToDown);
+})();
+
