@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap&subset=latin-ext')
 
-.to-top
+.to-top, .to-top-home
     width: 45px
     height: 45px
     position: absolute
     left: 90%
-    bottom: 5%
+    bottom: 6%
     z-index: 9
     cursor: pointer
-
+    
 .brand
     margin-left: 7rem
 
@@ -329,7 +329,7 @@ hr
     padding-right: 1.5rem
 
 
-@media ( max-width: 768px )
+@media ( max-width: 767px )
     .other
         text-align: center
     .other-1
@@ -354,16 +354,15 @@ hr
         margin-left: 25rem
     #navbarSupportedContent
         margin-right: 25rem
-    .to-top
+    .to-top, .to-top-home
         left: 80%
 
-@media ( max-width: 992px )
+@media ( max-width: 991px )
     .other
         text-align: center
     .other-1
         text-align: center
-    .to-top
-        bottom: 4%
+    .to-top, .to-top-home
         left: 85%
     .brand
         margin-left: 0
@@ -373,6 +372,8 @@ hr
         text-align: center  
     .btn-sign-up-home
         margin-left: 0
+    .to-top-home
+        bottom: 12%
 
 
 @media ( max-width: 576px )
@@ -382,7 +383,7 @@ hr
         margin: 0 auto
     .brand
         padding-left: 0
-    .to-top
+    .to-top, .to-top-home
         display: none
     .footer-a
         margin: 0.5rem
@@ -407,6 +408,8 @@ hr
         padding-left: 0
     .bg-home .navbar-nav .nav-link
         margin-right: 10px
+
+
 
 
 input
@@ -605,3 +608,46 @@ input
 
 #foot-hr
     background-color: #ffffff
+
+html
+    overflow-x: hidden
+
+.slider
+    overflow-x: hidden
+
+.owl-carousel
+    overflow-x: hidden
+
+.owl-theme .owl-dots .owl-dot span
+    background-color: #d4d4d4
+    width: 20px
+    height: 10px
+
+
+.owl-theme .owl-dots .owl-dot.active span
+    background-color: #0f7bff
+    width: 35px
+
+.owl-theme .owl-dots .owl-dot
+    &:hover span 
+        background-color: #0f7bff
+        cursor: pointer
+
+.owl-theme .owl-dots 
+    text-align: left
+
+.twit-slide
+    margin-right: 1.5rem
+    color: #00acee
+        
+.owl-carousel .owl-stage-outer 
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    
+
+    
+
+
+
+
