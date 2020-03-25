@@ -425,6 +425,9 @@ hr {
   .block-2-2 {
     top: 0;
   }
+  .owl-theme .owl-dots {
+    text-align: center;
+  }
 }
 
 @media (max-width: 1590px) {
@@ -449,7 +452,7 @@ hr {
   #navbarSupportedContent {
     margin-right: 25rem;
   }
-  .to-top, .to-top-home {
+  .to-top {
     left: 80%;
   }
 }
@@ -461,7 +464,7 @@ hr {
   .other-1 {
     text-align: center;
   }
-  .to-top, .to-top-home {
+  .to-top {
     left: 85%;
   }
   .brand {
@@ -476,8 +479,12 @@ hr {
   .btn-sign-up-home {
     margin-left: 0;
   }
-  .to-top-home {
+  #to-top-home {
     bottom: 12%;
+    left: 90%;
+  }
+  #hr-home {
+    width: 30rem;
   }
 }
 
@@ -496,9 +503,6 @@ hr {
   }
   .footer-a {
     margin: 0.5rem;
-  }
-  .to-down {
-    text-align: center;
   }
   .bg-1 {
     left: 0;
@@ -527,6 +531,48 @@ hr {
   }
   .bg-home .navbar-nav .nav-link {
     margin-right: 10px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #to-top-home {
+    left: 96%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #to-top-home {
+    left: 90%;
+    bottom: 4%;
+  }
+  #hr-home {
+    width: 40rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .owl-theme .owl-dots {
+    text-align: left;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn-subscribe {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .btn-subscribe {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #hr-home {
+    width: 50rem;
   }
 }
 
@@ -584,8 +630,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
   color: #0f7bff;
   font-size: 16px;
   font-weight: 700;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
 }
 
 .btn-subscribe:hover {
@@ -707,8 +751,9 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
 }
 
 #hr-home {
-  background-color: #0f7bff;
   top: 4.7rem;
+  left: 8rem;
+  background-color: #3691ff;
 }
 
 #h1 {
@@ -728,6 +773,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
 .to-down {
   bottom: 2rem;
   cursor: pointer;
+  right: 2rem;
 }
 
 .home-device {
@@ -783,14 +829,6 @@ html {
   overflow-x: hidden;
 }
 
-.slider {
-  overflow-x: hidden;
-}
-
-.owl-carousel {
-  overflow-x: hidden;
-}
-
 .owl-theme .owl-dots .owl-dot span {
   background-color: #d4d4d4;
   width: 20px;
@@ -805,10 +843,6 @@ html {
 .owl-theme .owl-dots .owl-dot:hover span {
   background-color: #0f7bff;
   cursor: pointer;
-}
-
-.owl-theme .owl-dots {
-  text-align: left;
 }
 
 .twit-slide {

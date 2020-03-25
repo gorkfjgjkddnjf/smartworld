@@ -31,14 +31,18 @@ $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         loop: true,
         items: 1,
+        margin: 30,
         responsive:{
             0:{
                 items:1
             },
-            600:{
-                items:3
+            760:{
+                items:2
             },
             1000:{
+                items:2
+            },
+            1700:{
                 items:3
             }
         }

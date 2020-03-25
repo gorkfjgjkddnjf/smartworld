@@ -338,6 +338,8 @@ hr
         width: 30rem
     .block-2-2
         top: 0
+    .owl-theme .owl-dots 
+        text-align: center
 
 @media ( max-width: 1590px )
     .bg-1
@@ -354,7 +356,7 @@ hr
         margin-left: 25rem
     #navbarSupportedContent
         margin-right: 25rem
-    .to-top, .to-top-home
+    .to-top
         left: 80%
 
 @media ( max-width: 991px )
@@ -362,7 +364,7 @@ hr
         text-align: center
     .other-1
         text-align: center
-    .to-top, .to-top-home
+    .to-top
         left: 85%
     .brand
         margin-left: 0
@@ -372,8 +374,11 @@ hr
         text-align: center  
     .btn-sign-up-home
         margin-left: 0
-    .to-top-home
+    #to-top-home
         bottom: 12%
+        left: 90%
+    #hr-home
+        width: 30rem
 
 
 @media ( max-width: 576px )
@@ -387,8 +392,6 @@ hr
         display: none
     .footer-a
         margin: 0.5rem
-    .to-down
-        text-align: center
     .bg-1
         left: 0
     .text-bg-1
@@ -409,8 +412,34 @@ hr
     .bg-home .navbar-nav .nav-link
         margin-right: 10px
 
+@media ( min-width: 1200px) and (max-width: 1400px )
+    #to-top-home
+        left: 96%
 
+@media ( min-width: 992px) and (max-width: 1200px )
+    #to-top-home
+        left: 90%
+        bottom: 4%
+    #hr-home   
+        width: 40rem
 
+@media ( min-width: 760px)    
+    .owl-theme .owl-dots 
+        text-align: left
+
+@media ( max-width: 360px)   
+    .btn-subscribe
+        padding-left: 1rem
+        padding-right: 1rem
+
+@media ( min-width: 360px)   
+    .btn-subscribe
+        padding-left: 2.4rem
+        padding-right: 2.4rem
+
+@media ( min-width: 1200px) 
+    #hr-home   
+        width: 50rem
 
 input
     &[type="text"], &[type="password"], &[type="email"], &[type="search"]
@@ -457,8 +486,6 @@ input
     color: #0f7bff
     font-size: 16px
     font-weight: 700
-    padding-left: 2.4rem
-    padding-right: 2.4rem
     &:hover
         color: #0f7bff
 
@@ -552,8 +579,9 @@ input
     background-color: #f5fcfd
 
 #hr-home
-	background-color: #0f7bff
-	top: 4.7rem
+    top: 4.7rem
+    left: 8rem
+    background-color: #3691ff
 
 #h1
     color: #333333
@@ -570,6 +598,7 @@ input
 .to-down
     bottom: 2rem
     cursor: pointer
+    right: 2rem
 
 .home-device
     margin-top: 6rem
@@ -612,17 +641,10 @@ input
 html
     overflow-x: hidden
 
-.slider
-    overflow-x: hidden
-
-.owl-carousel
-    overflow-x: hidden
-
 .owl-theme .owl-dots .owl-dot span
     background-color: #d4d4d4
     width: 20px
     height: 10px
-
 
 .owl-theme .owl-dots .owl-dot.active span
     background-color: #0f7bff
@@ -633,9 +655,6 @@ html
         background-color: #0f7bff
         cursor: pointer
 
-.owl-theme .owl-dots 
-    text-align: left
-
 .twit-slide
     margin-right: 1.5rem
     color: #00acee
@@ -644,7 +663,8 @@ html
     padding-top: 2rem
     padding-bottom: 2rem
 
-    
+
+ 
 
     
 
