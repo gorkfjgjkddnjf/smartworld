@@ -455,6 +455,9 @@ hr {
   .to-top {
     left: 80%;
   }
+  .image-slide {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 991px) {
@@ -550,7 +553,7 @@ hr {
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 992px) {
   .owl-theme .owl-dots {
     text-align: left;
   }
@@ -573,6 +576,12 @@ hr {
 @media (min-width: 1200px) {
   #hr-home {
     width: 50rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 2000px) {
+  .image-slide {
+    margin-right: 4rem;
   }
 }
 
@@ -825,7 +834,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
   background-color: #ffffff;
 }
 
-html {
+html, body {
   overflow-x: hidden;
 }
 
@@ -851,7 +860,8 @@ html {
 }
 
 .owl-carousel .owl-stage-outer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 245px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -30,23 +30,24 @@ $(document).ready(function(){
 
     $(".owl-carousel").owlCarousel({
         loop: true,
-        items: 1,
-        margin: 30,
+        items: 1,      
         responsive:{
             0:{
                 items:1
             },
             760:{
-                items:2
+                items:2,
             },
             1000:{
-                items:2
+                items:2,
+                stagePadding: -60,
             },
             1700:{
-                items:3
+                items:3,
+                stagePadding: -60, 
             }
-        }
+        },
+        margin: 30,
     });
 
   });
-
