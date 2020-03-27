@@ -45,6 +45,10 @@ $(document).ready(function(){
             1700:{
                 items:3,
                 stagePadding: -60, 
+            },
+            2000:{
+                items:3,
+                stagePadding: 0
             }
         },
         margin: 30,
