@@ -1,185 +1,149 @@
-//let requestURL = 'js/json/signin.json';
-let requestURL = 'js/json/signup.json';
-//let requestURL = 'js/json/colorsheme.json';
+let requestURL = 'js/json/signin.json';
+buildForm(requestURL);
 
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+function buildForm(requestURL) {
+  fetch(requestURL)
+    .then((response) => response.json())
+    .then((jsonObj) => {
 
-let main_row = document.querySelector('#main-form');
+      let mainContainer = document.querySelector('#main-container');
+      let form = document.createElement('form');
 
-request.onload = function() {
+      form.setAttribute('role', 'form');
+      form.setAttribute('name', 'signin');
 
-  let cahce = request.response;
+      buildTitle(jsonObj, form);
+      buildFields(jsonObj, form);
+      buildRef(jsonObj,form);
+      buildButtons(jsonObj, form);
 
-  buildTitle(cahce);
-  buildFields(cahce);
-  if(cahce.hasOwnProperty('references')){
-    buildRef(cahce);
-  }
-  if(cahce.hasOwnProperty('buttons')){
-    buildButtons(cahce);
-  }
+      mainContainer.append(form);
+  });
 }
 
-function buildFields(jsonObj) {
+function buildWrapper(fields){
 
-  let fields = jsonObj['fields'];
+  //let formRow = document.createElement('div');
+  let formGroup = document.createElement('div');
 
-  for(let i in fields){
+  formGroup.className = 'form-group';
+  //formRow.className = 'form-row justify-content-center';
 
-    let row = document.createElement('div');
-    let form_group = document.createElement('div');
-    let input = document.createElement('input');
-
-    if(fields[i].hasOwnProperty('label')){
-      let label = document.createElement('label');
-      label.htmlFor = 'test' + i;
-      label.textContent = fields[i]['label'];       
-      form_group.append(label);
-    }
-
-    row.className = 'row justify-content-center';
-    form_group.className = 'form-group col-12 col-md-8 col-lg-6 col-xl-4';
-      
-    input.className = 'form-control form-control-lg'; 
-    input.id = 'test' + i;    
-    input.type = fields[i].input['type'];
-    input.placeholder = fields[i].input['placeholder'];
-    input.required = fields[i].input['required'];
-
-    if(fields[i].input.hasOwnProperty('colors')){
-
-      let colors = fields[i].input['colors'];
-      let datalist = document.createElement('datalist');
-
-      datalist.id = 'colorlist' + i;
-      input.setAttribute('list','colorlist' + i);
-      input.className += ' color';
-
-      for(let key of colors){
-        let option = document.createElement('option');
-        option.value = key;
-        datalist.append(option);
-      }
-      input.append(datalist);
-      //window.addEventListener("load", startup, false);
-    }
-
-    // if(fields[i].input.hasOwnProperty('checked')){
-    //   input.className += ' check';
-    //   input.checked = fields[i].input['checked'];
-      
-    //   if(input.checked == true){
-    //     window.addEventListener("load", startup1, false);
-    //   }
-    // }
-    form_group.append(input);
-    row.append(form_group);
-    main_row.append(row);
+  if(fields.input.type == 'checkbox'){
+    formGroup.className = 'form-check';
   }
+  //formRow.append(formGroup)
+  return formGroup;
+
 }
 
-function buildTitle(jsonObj){
+function buildTitle(jsonObj, form) {
 
-  let container = document.querySelector('.container');
   let h1 = document.createElement('h4');
 
   h1.className = 'text-center mb-4';
   h1.textContent = jsonObj['name'];
 
-  container.prepend(h1);
+  form.prepend(h1);
 }
 
-function buildButtons(jsonObj){
-
-  let buttons = jsonObj['buttons'];
-
-  let row = document.createElement('div');
-  let col = document.createElement('div');
-  let input = document.createElement('input');
-
-  row.className = 'row justify-content-center mt-4';
-  col.className = 'col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2';
-
-  input.className = 'btn btn-primary w-100';
-  input.type = 'submit';
-  input.name = 'login';
-  input.value = buttons[0]['text'];
-
-  col.append(input);
-  row.append(col);
-  main_row.append(row);
-}
-
-function buildRef(jsonObj){
-
-  let references = jsonObj['references'];
-  let row = document.createElement('div');
-
-  for(let i in references){
-
-    let col = document.createElement('div');
-    let p = document.createElement('p');
-    let a = document.createElement('a');
-
-    row.className = 'row justify-content-center mx-0';
-    col.className = 'col-6 col-md-4 col-lg-3 col-xl-2 ref' + i;
-
-    a.href = references[i]['ref'] + '.html';
-    a.textContent = references[i]['text'];
-    p.className = 'mb-0 mt-2'
-    
-    if(references[i].hasOwnProperty('text without ref')){
-      p.className = 'text-center mb-0 mt-2';
-      p.textContent = references[i]['text without ref'] + ' ';
-      col.className = 'col-12';
+function buildLabel(fields, i){
+  if(fields.hasOwnProperty('label')){
+    let label = document.createElement('label');
+    label.htmlFor = 'test' + i;
+    label.textContent = fields.label;
+    if(fields.input.type == 'checkbox'){
+      label.className = 'form-check-label';
     }
-
-
-    p.append(a);
-    col.append(p);
-    row.append(col);
-    main_row.append(row);
+    return label;
   }
 }
 
-// function startup(){
-//   let color = document.querySelector('.color');
-//   color.addEventListener("input", updateFirst, false);
-// }
+function buildInput(fields, i){
+  let input = document.createElement('input');
+  input.type = fields.input.type;
+  input.id = 'test' + i;
+  if(fields.input.hasOwnProperty('required')){
+    input.required = fields.input.required;
+  }
+  if(fields.input.type != 'color' || fields.input.type != 'checkbox'){
+    input.className = 'form-control form-control-lg';
+    input.placeholder = fields.input.placeholder;
+  }
+  else if(fields.input.type == 'checkbox'){
+    input.className = 'form-check-input';
+  }
+  return input;
+}
 
-// function startup1(){
-//   let color = document.querySelector('.check');
-//   color.addEventListener("input", backtocolor, false);
-// }
+function buildFields(jsonObj, form){
 
-// function updateFirst(event){
-//   let body = document.querySelector('body');
-//   body.style.color = event.target.value;
-// }
+  jsonObj.fields.forEach(function(fields, i){
 
-// function backtocolor(event){
-//   let body = document.querySelector('body');
-//   body.style.color = "#000000";
-// }
+    let wrapper = buildWrapper(fields);
+    if(fields.input.type != 'checkbox'){
+      wrapper.append(buildLabel(fields, i), buildInput(fields, i));
+    }
+    else{
+      wrapper.append(buildInput(fields, i), buildLabel(fields, i));
+    }
+    form.append(wrapper);
+  });
+}
 
+function buildButtons(jsonObj, form){
+  if(jsonObj.buttons != undefined){
 
-// fetch('js/json.json')
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((data) => {
-//     let a = document.createElement('div');
-//     a.className = 'container text-center';
-//     a.textContent = data['name'];
-//     header.appendChild(a);
-//   });
+    let row = document.createElement('div');
+    row.className = 'row justify-content-center mt-4';
 
+    jsonObj.buttons.forEach(function(buttons,i){
 
+      let col = document.createElement('div');
+      let btn = document.createElement('input');
 
+      col.className = 'col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2';
+      btn.className = 'btn btn-primary w-100';
 
+      btn.type = 'submit';
+      btn.value = buttons.text;
 
+      col.append(btn);
+      row.append(col);
 
+    });
+    form.append(row)
 
+  }
+}
+
+function buildRef(jsonObj, form){
+  if(jsonObj.references != undefined ){
+
+    let row = document.createElement('div');
+
+    jsonObj.references.forEach(function(references, i){
+
+      let p = document.createElement('p');
+      let a = document.createElement('a');
+
+      a.textContent = references.text;
+      a.name = references.ref;
+      a.href = '#';
+
+      a.addEventListener('click', {
+        handleEvent(){
+          form.remove();
+          requestURL = 'js/json/' + a.name + '.json';
+          buildForm(requestURL);
+        }
+      });
+
+      p.append(a);
+      row.append(p);
+
+    });
+    form.append(row);
+
+  }
+}
